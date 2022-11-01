@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Electron Chat</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Welcome to Chatbox</h1>
+  </header>
+
+  <section>
+    <div id="change_username">
+      <input id="username" type="text" />
+      <button id="send_username" type="button">Change username</button>
+    </div>
+  </section>
+
+  <section id="chatroom">
+    <section id="feedback"></section>
+  </section>
+
+
+
+  <section id="input_zone">
+    <input id="message" class="vertical-align" type="text" />
+    <button id="send_message" class="vertical-align" type="button">Send</button>
+  </section>
+</body>
+<script src="https://cdn.socket.io/4.5.3/socket.io.min.js"
+  integrity="sha384-WPFUvHkB1aHA5TDSZi6xtDgkF0wXJcIIxXhC6h8OT8EH3fC5PWro5pWJ1THjcfEi" crossorigin="anonymous"></script>
+<script src="script.js">
+
+</script>
+
+</html>
