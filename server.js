@@ -3,7 +3,7 @@ const { Server } = require("socket.io");
 const { createServer } = require("http");
 // you need to set up a local server and basic socket connection Here
 // App setup
-const PORT = 3000;
+const PORT = 5000;
 const app = express();
 const server = createServer(app);
 const io = new Server(server, {
@@ -13,7 +13,7 @@ const io = new Server(server, {
 });
 server.listen(PORT, function () {
   console.log(`Listening on port ${PORT}`);
-  console.log(`http://localhost:${PORT}`);
+  console.log(`http://datumbrain.local:${PORT}`);
 });
 
 // Static files
