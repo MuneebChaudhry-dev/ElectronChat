@@ -1,14 +1,19 @@
 {
-  "name": "electron-chat",
+  "name": "ChitChat",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is an Electron chat application for ",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "server": "node server.js"
+    "server": "node server.js",
+    "package-mac": "electron-packager . ChitChat --overwrite --platform=darwin --arch=x64 --icon=assets/chat.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . ChitChat --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
+    "package-linux": "electron-packager . ChitChat --overwrite --asar --platform=linux --arch=x64 --icon=assets/chat.png --prune=true --out=release-builds",
+    "create-installer-mac": "npx electron-installer-dmg ./release-builds/ChitChat-darwin-x64/ChitChat.app ChitChat --out=release-builds --overwrite --icon=/assets/chat.icns",
+    "create-debian-installer": "electron-installer-debian --src release-builds/ChitChat-linux-x64/ --arch=amd64 --config debian.json"
   },
-  "author": "",
+  "author": "Muneeb Ahmad",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
@@ -16,7 +21,11 @@
     "socket.io-client": "^4.5.3"
   },
   "devDependencies": {
-    "electron": "^21.2.0",
+    "electron": "^21.2.1",
+    "electron-installer-dmg": "^4.0.0",
     "electron-packager": "^17.1.0"
+  },
+  "packagerConfig": {
+    "executableName": "ChitChat"
   }
 }
