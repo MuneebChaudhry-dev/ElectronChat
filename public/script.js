@@ -1,4 +1,4 @@
-var socket = io("http://datumbrain.local:5000", {});
+var socket = io("http://192.168.100.125:5000", {});
 // socket.on("connect", function () {});
 // socket.on("event", function (data) {});
 // socket.on("disconnect", function () {});
